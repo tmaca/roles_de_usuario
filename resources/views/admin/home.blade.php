@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Admin Sonia Dashboard</div>
+                    <div class="panel-heading">Admin Tamara Dashboard</div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -16,6 +16,11 @@
 
                         You are logged in, Admin!
                     </div>
+                    <?php
+
+                    echo Session::getId()
+
+                    ?>
                 </div>
             </div>
         </div>
