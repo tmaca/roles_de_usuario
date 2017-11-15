@@ -8,13 +8,21 @@
                 <div class="panel-heading">User Dashboard</div>
 
                 <div class="panel-body">
+                    <!--session-->
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    You are logged in, User!
+                    <!--roles-->
+                    @if(Auth::user()->hasRole('admin'))
+                        <div>Acceso como administrador</div>
+                    @else
+                        <div>Acceso usuario</div>
+                    @endif
+
+                    You are logged in!
                 </div>
             </div>
         </div>
